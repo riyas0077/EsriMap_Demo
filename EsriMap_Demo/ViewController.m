@@ -38,15 +38,8 @@
 
 
 #pragma mark - EsriMapCustomDelegate Methods
-
 - (void)newPinAddressObtained:(NSDictionary *)addressDictionary
 {
-    //    self.loggedInUser.city = [addressDictionary valueForKey:@"Region"];
-    //    self.loggedInUser.area = [addressDictionary valueForKey:@"Address"];
-    //    self.loggedInUser.street = [addressDictionary valueForKey:@"City"];
-    //    self.loggedInUser.country = [addressDictionary valueForKey:@"CountryCode"];
-    
-    
     NSLog(@"SubRegion %@",[addressDictionary valueForKey:@"Subregion"]);
     NSLog(@"City %@",[addressDictionary valueForKey:@"City"]);
     NSLog(@"Address %@",[addressDictionary valueForKey:@"Address"]);
