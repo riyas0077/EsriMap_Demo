@@ -6,7 +6,8 @@ EsriMap Demo is a delightful helper class for iOS using Objective C for integrat
 
 
 How To Get Started
-Download the project. And then you need to download Esri Map.
+
+Download the project. And then you need to download Esri Map SDK from CocoaPods.
 
 
 Installation with CocoaPods
