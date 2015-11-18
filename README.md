@@ -10,10 +10,10 @@ Download the project. And then you need to download Esri Map.
 
 
 Installation with CocoaPods
-
 CocoaPods is a dependency manager for Objective-C, which automates and simplifies the process of using 3rd-party libraries  in your projects. ArcGis Esri Map SDK is available on https://cocoapods.org/pods/ArcGIS-Runtime-SDK-iOS (as on 18Nov 2015). If not available in this link, then you can try checking for EsriMap Sdk for ios on https://cocoapods.org/
 
 PodFile
+
 The podfile for this project is also available inside this project . You just need to run pod install pointing to the path where your project is.
 The podfile which you need to have in your personnel should contain the following text. But I recommend you always get the latest podfile syntax from cocoapods.org
 
@@ -23,6 +23,7 @@ end
 
 
 How to Use in your project
+
 You can use the helper classes available in helper folder inside the project. There are 2 classes available namely EsriMapVIew & CurrentLocationManager. 
 EsriMapVIew.h & EsriMapVIew.m are files to add EsriMap to your project.
 
@@ -37,6 +38,7 @@ self.mapView.esriMapCustomDelegate = self;
 
 
 API's to be used in EsriMap
+
 To initialize Esri Map
 - (void)initializeEsriMap; 
 
@@ -50,7 +52,10 @@ To get the street address for the location. You will get the reverse geocoded ad
 - (void)getAddressForPinShownInMap:(CLLocation *)location;
 
 ESRIMAP-DELEGATE METHOD
+
 This returns you an address dictionary which contains details about the location you have passed for reverse geocoding 
 - (void)newPinAddressObtained:(NSDictionary *)addressDictionary;
+
+You will have all the errors wiped off when you run the podfile for fetching ARCGIS_ESRIMAP_IOS_SDK
 
 
