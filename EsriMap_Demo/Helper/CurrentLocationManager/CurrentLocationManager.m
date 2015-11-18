@@ -2,7 +2,7 @@
 //  CurrentLocationManager.m
 //  OTW
 //
-//  Created by Asim Hafeez on 8/13/15.
+//  Created by Riyas Abdul Rahman on 8/13/15.
 //  Copyright (c) 2015 EnterMarkets. All rights reserved.
 //
 

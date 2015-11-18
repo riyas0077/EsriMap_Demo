@@ -2,7 +2,7 @@
 //  EsriMapVIew.h
 //  AnaJahiz
 //
-//  Created by Asim Hafeez on 10/11/15.
+//  Created by Riyas Abdul Rahman on 10/11/15.
 //  Copyright © 2015 EnterMarkets. All rights reserved.
 //
 
@@ -22,8 +22,8 @@
 @property (nonatomic, assign) id <EsriMapCustomDelegate> esriMapCustomDelegate;
 
 - (void)initializeEsriMap;
-- (void)setCustomMapMarker;
-- (void)getAddressForPinShownInMap:(CLLocation *)currentLocation;
+- (void)setCustomMapMarker:(NSString *)imageName;
+- (void)getAddressForPinShownInMap:(CLLocation *)location;
 - (void)centreMapForLocation:(CLLocation *)location;
 
 @end

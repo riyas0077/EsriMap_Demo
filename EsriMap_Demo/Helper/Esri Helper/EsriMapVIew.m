@@ -2,7 +2,7 @@
 //  EsriMapVIew.m
 //  AnaJahiz
 //
-//  Created by Asim Hafeez on 10/11/15.
+//  Created by Riyas Abdul Rahman on 10/11/15.
 //  Copyright © 2015 EnterMarkets. All rights reserved.
 //
 
@@ -97,10 +97,8 @@
 
 
 //If you want to set custom pin in map
-- (void)setCustomMapMarker
+- (void)setCustomMapMarker:(NSString *)imageName
 {
-    NSString *imageName = @"CheckedInMarker";
-    
     if(!_marker)
     {
         _marker = [AGSPictureMarkerSymbol pictureMarkerSymbolWithImageNamed:imageName];
@@ -130,14 +128,14 @@
 
 
 //To get address of the pin location -  from Esri Server
-- (void)getAddressForPinShownInMap:(CLLocation *)currentLocation
+- (void)getAddressForPinShownInMap:(CLLocation *)location
 {
     NSString *kGeoLocatorURL = GEO_LOCATOR_URL;
     _locator = [AGSLocator locatorWithURL:[NSURL URLWithString:kGeoLocatorURL]];
     self.locator.delegate = self;
     
-    AGSPoint *mapPoint  = [self agsPointFromLatitude:currentLocation.coordinate.latitude
-                                           longitude:currentLocation.coordinate.longitude];
+    AGSPoint *mapPoint  = [self agsPointFromLatitude:location.coordinate.latitude
+                                           longitude:location.coordinate.longitude];
     [self.locator addressForLocation:mapPoint maxSearchDistance:1000];
 }
 
