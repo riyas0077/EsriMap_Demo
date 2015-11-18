@@ -1,25 +1,68 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="RiC-9Y-PMp">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <scene sceneID="ZYh-kf-inh">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="RiC-9Y-PMp" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="x0n-0n-XcG"/>
+                        <viewControllerLayoutGuide type="bottom" id="kmz-9K-cZP"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="1Q1-f7-L9S">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PaD-sQ-O9J" customClass="EsriMapVIew">
+                                <rect key="frame" x="0.0" y="64" width="600" height="478"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Location Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nj7-Wv-VA0">
+                                <rect key="frame" x="233" y="564" width="333" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="ZAu-44-Hkb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pin Address (Reverse Geocoding):" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="PNC-0J-xlb">
+                                <rect key="frame" x="20" y="564" width="193" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="hJQ-HZ-dSj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="PNC-0J-xlb" firstAttribute="leading" secondItem="1Q1-f7-L9S" secondAttribute="leading" constant="20" id="0QQ-0K-Wx8"/>
+                            <constraint firstItem="nj7-Wv-VA0" firstAttribute="top" secondItem="PaD-sQ-O9J" secondAttribute="bottom" constant="22" id="8Pq-fb-K8g"/>
+                            <constraint firstItem="kmz-9K-cZP" firstAttribute="top" secondItem="PaD-sQ-O9J" secondAttribute="bottom" constant="58" id="HcK-07-ii8"/>
+                            <constraint firstItem="PNC-0J-xlb" firstAttribute="top" secondItem="PaD-sQ-O9J" secondAttribute="bottom" constant="22" id="HxX-CS-2Ca"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="nj7-Wv-VA0" secondAttribute="trailing" constant="14" id="JKJ-sK-EO0"/>
+                            <constraint firstItem="PaD-sQ-O9J" firstAttribute="leading" secondItem="1Q1-f7-L9S" secondAttribute="leading" id="Mxw-oo-GQp"/>
+                            <constraint firstItem="nj7-Wv-VA0" firstAttribute="leading" secondItem="PNC-0J-xlb" secondAttribute="trailing" constant="20" id="YOK-95-WUx"/>
+                            <constraint firstItem="PaD-sQ-O9J" firstAttribute="top" secondItem="x0n-0n-XcG" secondAttribute="bottom" constant="44" id="ay5-i2-AG4"/>
+                            <constraint firstItem="nj7-Wv-VA0" firstAttribute="leading" secondItem="PNC-0J-xlb" secondAttribute="trailing" constant="20" id="qlz-4s-skC"/>
+                            <constraint firstAttribute="trailing" secondItem="PaD-sQ-O9J" secondAttribute="trailing" id="srM-CP-NQi"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="mapView" destination="PaD-sQ-O9J" id="e2f-df-txE"/>
+                        <outlet property="userLocationLabel" destination="nj7-Wv-VA0" id="ppp-65-55O"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cdt-qw-tC0" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="305" y="415"/>
         </scene>
     </scenes>
 </document>

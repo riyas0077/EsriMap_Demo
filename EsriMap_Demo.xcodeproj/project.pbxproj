@@ -13,6 +13,8 @@
 		63E673361BF9FEEE00632A9C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63E673341BF9FEEE00632A9C /* Main.storyboard */; };
 		63E673381BF9FEEE00632A9C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63E673371BF9FEEE00632A9C /* Assets.xcassets */; };
 		63E6733B1BF9FEEE00632A9C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63E673391BF9FEEE00632A9C /* LaunchScreen.storyboard */; };
+		63E673491BFA000C00632A9C /* CurrentLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E673451BFA000C00632A9C /* CurrentLocationManager.m */; };
+		63E6734A1BFA000C00632A9C /* EsriMapVIew.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E673481BFA000C00632A9C /* EsriMapVIew.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,10 @@
 		63E673371BF9FEEE00632A9C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		63E6733A1BF9FEEE00632A9C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		63E6733C1BF9FEEE00632A9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		63E673441BFA000C00632A9C /* CurrentLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrentLocationManager.h; sourceTree = "<group>"; };
+		63E673451BFA000C00632A9C /* CurrentLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurrentLocationManager.m; sourceTree = "<group>"; };
+		63E673471BFA000C00632A9C /* EsriMapVIew.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EsriMapVIew.h; sourceTree = "<group>"; };
+		63E673481BFA000C00632A9C /* EsriMapVIew.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EsriMapVIew.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,7 @@
 		63E6732A1BF9FEEE00632A9C /* EsriMap_Demo */ = {
 			isa = PBXGroup;
 			children = (
+				63E673421BFA000C00632A9C /* Helper */,
 				63E6732E1BF9FEEE00632A9C /* AppDelegate.h */,
 				63E6732F1BF9FEEE00632A9C /* AppDelegate.m */,
 				63E673311BF9FEEE00632A9C /* ViewController.h */,
@@ -77,6 +84,33 @@
 				63E6732C1BF9FEEE00632A9C /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		63E673421BFA000C00632A9C /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				63E673431BFA000C00632A9C /* CurrentLocationManager */,
+				63E673461BFA000C00632A9C /* Esri Helper */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		63E673431BFA000C00632A9C /* CurrentLocationManager */ = {
+			isa = PBXGroup;
+			children = (
+				63E673441BFA000C00632A9C /* CurrentLocationManager.h */,
+				63E673451BFA000C00632A9C /* CurrentLocationManager.m */,
+			);
+			path = CurrentLocationManager;
+			sourceTree = "<group>";
+		};
+		63E673461BFA000C00632A9C /* Esri Helper */ = {
+			isa = PBXGroup;
+			children = (
+				63E673471BFA000C00632A9C /* EsriMapVIew.h */,
+				63E673481BFA000C00632A9C /* EsriMapVIew.m */,
+			);
+			path = "Esri Helper";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,6 +185,8 @@
 			files = (
 				63E673331BF9FEEE00632A9C /* ViewController.m in Sources */,
 				63E673301BF9FEEE00632A9C /* AppDelegate.m in Sources */,
+				63E673491BFA000C00632A9C /* CurrentLocationManager.m in Sources */,
+				63E6734A1BFA000C00632A9C /* EsriMapVIew.m in Sources */,
 				63E6732D1BF9FEEE00632A9C /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

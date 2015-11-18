@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "EsriMapVIew.h"
 
-@interface ViewController : UIViewController
-
+@interface ViewController : UIViewController <EsriMapCustomDelegate>
+@property (strong, nonatomic) IBOutlet EsriMapVIew *mapView;
+@property (strong, nonatomic) IBOutlet UILabel *userLocationLabel;
 
 @end
 
