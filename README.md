@@ -19,7 +19,9 @@ The podfile for this project is also available inside this project . You just ne
 The podfile which you need to have in your personnel should contain the following text. But I recommend you always get the latest podfile syntax from cocoapods.org
 
 target ‘ProjectName’ do
+
 pod 'ArcGIS-Runtime-SDK-iOS'
+
 end
 
 
